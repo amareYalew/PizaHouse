@@ -5,15 +5,15 @@ import style from '../PizaComponent/Recipe.css';
 
  const Recipes=({title,image,calories,ingredients})=> {
     return (
-        <div>
-            <h1 style={recipe }>{title}</h1>
+        <div style={recipe }>
+            <h1 >{title}</h1>
             <ol>
                 {ingredients.map(ingredient => (
                     <li>{ingredient.text} </li>
                 ))}
             </ol>
             <p>{calories}</p>
-            <img src={image} alt=""></img>
+            <img src={image} style={im}alt=""></img>
         </div>
     )
 }
@@ -29,3 +29,9 @@ const recipe = {
     alignItems: "center",
     minWidth: "40%"
 }
+const im = {
+    borderRadius: "50 %",
+    width: "100px",
+    hight :"100px"
+}
+
